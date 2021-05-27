@@ -28,7 +28,6 @@
     .then(mod=>{
       const instance = new WebAssembly.Instance(mod)
       const exports = instance.exports
-      console.log(exports)
       console.time('wasm执行时间')
       exports._Z4fiibi(45)
       console.timeEnd('wasm执行时间')

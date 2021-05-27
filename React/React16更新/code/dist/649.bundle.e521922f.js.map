@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://code/./src/components/LazyComp.js"],"names":["LazyComp"],"mappings":"2IAEe,SAASA,IACpB,OAAO,oD,oRADaA,E","file":"649.bundle.e521922f.js","sourcesContent":["import React from 'react'\r\n\r\nexport default function LazyComp() {\r\n    return <div>\r\n        I am a lazy component\r\n    </div>\r\n}\r\n"],"sourceRoot":""}

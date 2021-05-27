@@ -1,0 +1,12 @@
+@font-face
+{
+    font-family: 思源黑体;
+    src:url('../fonts/SourceHanSansCN-Medium.otf')
+}
+@font-face{
+    font-family:AgencyFB-Reg ;
+    src:url('./fonts/AgencyFB-Reg.ttf')
+}
+body {
+    font-family: 思源黑体;
+}

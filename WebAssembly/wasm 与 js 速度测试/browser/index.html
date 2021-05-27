@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  asdfasdfadfs
+  <script>  
+    function fiib(x){
+      if(x <= 0)
+        return 0;
+      if(x <= 2)
+        return 1;
+      return fiib(x - 1) + fiib(x - 2)
+    }
+
+    console.time('js执行时间')
+    fiib(45)
+    console.timeEnd('js执行时间')
+
+
+    fetch('./test.wasm')
+    .then(res=>res.arrayBuffer())
+    .then(bytes=>WebAssembly.compile(bytes))
+    .then(mod=>{
+      const instance = new WebAssembly.Instance(mod)
+      const exports = instance.exports
+      console.log(exports)
+      console.time('wasm执行时间')
+      exports._Z4fiibi(45)
+      console.timeEnd('wasm执行时间')
+    })
+  </script>
+</body>
+</html>
